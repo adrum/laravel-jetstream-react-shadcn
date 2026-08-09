@@ -395,10 +395,12 @@ return Chisel::script(__DIR__)
         chiselRun([__DIR__.'/vendor/bin/pint', '--quiet'], 'Pint');
         chiselRun(['npx', 'prettier', '--write', 'resources/js'], 'Prettier');
 
-        $c->file('composer.json')->replace(
-            ",\n            \"@php artisan install:features --ansi\"",
-            '',
-        );
+        // The composer script entry is the last in its list, so it has to go
+        // with its leading comma to keep the JSON valid. The installer hook is
+        // the only entry in its own list and can go by line.
+        $c->file('composer.json')
+            ->replace(",\n            \"@php artisan install:features --ansi\"", '')
+            ->removeLinesContaining('"@php artisan install:features --ansi"');
 
         $c->files(
             'app/Console/Commands/InstallFeaturesCommand.php',
