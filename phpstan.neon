@@ -1,0 +1,16 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - phpstan-baseline.neon
+
+parameters:
+    paths:
+        - app
+        - database
+        - routes
+
+    level: 5
+
+    # Optional features can be removed at install time via chisel, which deletes
+    # some of the baselined files. Don't fail when a baselined error no longer
+    # matches because its code was stripped.
+    reportUnmatchedIgnoredErrors: false
