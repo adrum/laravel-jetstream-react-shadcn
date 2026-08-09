@@ -154,21 +154,21 @@ export default function APITokenManager({
                       checked={createApiTokenForm.data.permissions.includes(
                         permission,
                       )}
-                      onChange={e => {
+                      onCheckedChange={() => {
                         if (
                           createApiTokenForm.data.permissions.includes(
-                            e.currentTarget.value,
+                            permission,
                           )
                         ) {
                           createApiTokenForm.setData(
                             'permissions',
                             createApiTokenForm.data.permissions.filter(
-                              p => p !== e.currentTarget.value,
+                              p => p !== permission,
                             ),
                           );
                         } else {
                           createApiTokenForm.setData('permissions', [
-                            e.currentTarget.value,
+                            permission,
                             ...createApiTokenForm.data.permissions,
                           ]);
                         }
@@ -276,21 +276,19 @@ export default function APITokenManager({
                     checked={updateApiTokenForm.data.permissions.includes(
                       permission,
                     )}
-                    onChange={e => {
+                    onCheckedChange={() => {
                       if (
-                        updateApiTokenForm.data.permissions.includes(
-                          e.currentTarget.value,
-                        )
+                        updateApiTokenForm.data.permissions.includes(permission)
                       ) {
                         updateApiTokenForm.setData(
                           'permissions',
                           updateApiTokenForm.data.permissions.filter(
-                            p => p !== e.currentTarget.value,
+                            p => p !== permission,
                           ),
                         );
                       } else {
                         updateApiTokenForm.setData('permissions', [
-                          e.currentTarget.value,
+                          permission,
                           ...updateApiTokenForm.data.permissions,
                         ]);
                       }

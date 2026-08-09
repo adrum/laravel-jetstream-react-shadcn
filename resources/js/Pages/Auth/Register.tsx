@@ -113,7 +113,9 @@ export default function Register() {
                   name="terms"
                   id="terms"
                   checked={form.data.terms}
-                  onChange={e => form.setData('terms', e.currentTarget.checked)}
+                  onCheckedChange={checked =>
+                    form.setData('terms', checked === true)
+                  }
                   required
                 />
 

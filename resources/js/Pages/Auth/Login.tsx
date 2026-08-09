@@ -80,8 +80,8 @@ export default function Login({ canResetPassword, status }: Props) {
             <Checkbox
               name="remember"
               checked={form.data.remember === 'on'}
-              onChange={e =>
-                form.setData('remember', e.currentTarget.checked ? 'on' : '')
+              onCheckedChange={checked =>
+                form.setData('remember', checked ? 'on' : '')
               }
             />
             <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">

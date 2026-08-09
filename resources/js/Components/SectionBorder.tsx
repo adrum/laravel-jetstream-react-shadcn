@@ -1,10 +1,11 @@
 import React from 'react';
+import { Separator } from '@/Components/ui/separator';
 
 export default function SectionBorder() {
   return (
     <div className="hidden sm:block">
       <div className="py-8">
-        <div className="border-t border-gray-200 dark:border-gray-700"></div>
+        <Separator />
       </div>
     </div>
   );

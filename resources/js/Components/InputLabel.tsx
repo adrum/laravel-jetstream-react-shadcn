@@ -1,4 +1,5 @@
 import React, { PropsWithChildren } from 'react';
+import { Label } from '@/Components/ui/label';
 
 interface Props {
   value?: string;
@@ -10,12 +11,5 @@ export default function InputLabel({
   htmlFor,
   children,
 }: PropsWithChildren<Props>) {
-  return (
-    <label
-      className="block font-medium text-sm text-gray-700 dark:text-gray-300"
-      htmlFor={htmlFor}
-    >
-      {value || children}
-    </label>
-  );
+  return <Label htmlFor={htmlFor}>{value || children}</Label>;
 }
