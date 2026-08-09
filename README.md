@@ -30,9 +30,9 @@ php artisan install:features
 
 Check out my other Laravel starter kits:
 
-- [Laravel 12+ React (Mantine) Starter Kit](https://github.com/adrum/laravel-react-mantine-starter-kit): A React starter kit based on the oficial Laravel 12 React Starter Kit which provides a robust, modern starting point for building Laravel applications with a React frontend using Inertia.
-- [Laravel Jetstream + React (Typescript) Starter Kit](https://github.com/adrum/laravel-jetstream-react-typescript): Same as this kit, except it uses [HeadlessUI](https://headlessui.com).
-- [Laravel Jetstream + React (Mantine) Starter Kit](https://github.com/adrum/laravel-jetstream-react-mantine): Same as the above, except it swaps HeadlessUI with [Mantine](https://mantine.dev).
+- [Laravel React (Mantine) Starter Kit](https://github.com/adrum/laravel-react-mantine-starter-kit): The official Laravel React starter kit, with [Mantine](https://mantine.dev) in place of shadcn/ui.
+- [Laravel Jetstream + React (TypeScript) Starter Kit](https://github.com/adrum/laravel-jetstream-react-typescript): Jetstream and Inertia with [HeadlessUI](https://headlessui.com), the closest match to what Jetstream generates.
+- [Laravel Jetstream + React (Mantine) Starter Kit](https://github.com/adrum/laravel-jetstream-react-mantine): Jetstream and Inertia with [Mantine](https://mantine.dev).
 
 ## License
 
