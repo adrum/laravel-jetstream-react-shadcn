@@ -378,6 +378,7 @@ export default function TeamMemberManager({
       <DialogModal
         isOpen={currentlyManagingRole}
         onClose={() => setCurrentlyManagingRole(false)}
+        title={'Manage Role'}
       >
         <DialogModal.Content title={'Manage Role'}></DialogModal.Content>
         {managingRoleFor ? (
@@ -461,6 +462,7 @@ export default function TeamMemberManager({
       <ConfirmationModal
         isOpen={confirmingLeavingTeam}
         onClose={() => setConfirmingLeavingTeam(false)}
+        title={'Leave Team'}
       >
         <ConfirmationModal.Content title={'Leave Team'}>
           Are you sure you would like to leave this team?
@@ -486,6 +488,7 @@ export default function TeamMemberManager({
       <ConfirmationModal
         isOpen={!!teamMemberBeingRemoved}
         onClose={() => setTeamMemberBeingRemoved(null)}
+        title={'Remove Team Member'}
       >
         <ConfirmationModal.Content title={'Remove Team Member'}>
           Are you sure you would like to remove this person from the team?

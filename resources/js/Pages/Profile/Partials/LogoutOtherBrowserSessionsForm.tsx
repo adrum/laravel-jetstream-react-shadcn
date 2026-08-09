@@ -128,7 +128,11 @@ export default function LogoutOtherBrowserSessions({ sessions }: Props) {
       </div>
 
       {/* <!-- Log Out Other Devices Confirmation Modal --> */}
-      <DialogModal isOpen={confirmingLogout} onClose={closeModal}>
+      <DialogModal
+        isOpen={confirmingLogout}
+        onClose={closeModal}
+        title={'Log Out Other Browser Sessions'}
+      >
         <DialogModal.Content title={'Log Out Other Browser Sessions'}>
           Please enter your password to confirm you would like to log out of
           your other browser sessions across all of your devices.

@@ -46,6 +46,7 @@ export default function DeleteTeamForm({ team }: Props) {
       <ConfirmationModal
         isOpen={confirmingTeamDeletion}
         onClose={() => setConfirmingTeamDeletion(false)}
+        title={'Delete Team'}
       >
         <ConfirmationModal.Content title={'Delete Team'}>
           Are you sure you want to delete this team? Once a team is deleted, all

@@ -243,6 +243,7 @@ export default function APITokenManager({
       <DialogModal
         isOpen={displayingToken}
         onClose={() => setDisplayingToken(false)}
+        title={'API Token'}
       >
         <DialogModal.Content title={'API Token'}>
           <div>
@@ -265,6 +266,7 @@ export default function APITokenManager({
       <DialogModal
         isOpen={!!managingPermissionsFor}
         onClose={() => setManagingPermissionsFor(null)}
+        title={'API Token Permissions'}
       >
         <DialogModal.Content title={'API Token Permissions'}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

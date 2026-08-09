@@ -55,7 +55,11 @@ export default function DeleteUserForm() {
       </div>
 
       {/* <!-- Delete Account Confirmation Modal --> */}
-      <DialogModal isOpen={confirmingUserDeletion} onClose={closeModal}>
+      <DialogModal
+        isOpen={confirmingUserDeletion}
+        onClose={closeModal}
+        title={'Delete Account'}
+      >
         <DialogModal.Content title={'Delete Account'}>
           Are you sure you want to delete your account? Once your account is
           deleted, all of its resources and data will be permanently deleted.
