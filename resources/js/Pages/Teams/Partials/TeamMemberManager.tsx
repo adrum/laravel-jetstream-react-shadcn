@@ -159,7 +159,7 @@ export default function TeamMemberManager({
             )}
           >
             <div className="col-span-6">
-              <div className="max-w-xl text-sm text-gray-600 dark:text-gray-400">
+              <div className="max-w-xl text-sm text-muted-foreground">
                 Please provide the email address of the person you would like to
                 add to this team.
               </div>
@@ -192,14 +192,14 @@ export default function TeamMemberManager({
                   className="mt-2"
                 />
 
-                <div className="relative z-0 mt-1 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer">
+                <div className="relative z-0 mt-1 border border-border rounded-lg cursor-pointer">
                   {availableRoles.map((role, i) => (
                     <button
                       type="button"
                       className={classNames(
                         'relative px-4 py-3 inline-flex w-full rounded-lg focus:z-10 focus:outline-hidden focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-600',
                         {
-                          'border-t border-gray-200 dark:border-gray-700 focus:border-none rounded-t-none':
+                          'border-t border-border focus:border-none rounded-t-none':
                             i > 0,
                           'rounded-b-none':
                             i != Object.keys(availableRoles).length - 1,
@@ -221,7 +221,7 @@ export default function TeamMemberManager({
                         <div className="flex items-center">
                           <div
                             className={classNames(
-                              'text-sm text-gray-600 dark:text-gray-400',
+                              'text-sm text-muted-foreground',
                               {
                                 'font-semibold':
                                   addTeamMemberForm.data.role == role.key,
@@ -247,7 +247,7 @@ export default function TeamMemberManager({
                         </div>
 
                         {/* <!-- Role Description --> */}
-                        <div className="mt-2 text-xs text-gray-600 dark:text-gray-400">
+                        <div className="mt-2 text-xs text-muted-foreground">
                           {role.description}
                         </div>
                       </div>
@@ -280,7 +280,7 @@ export default function TeamMemberManager({
                   className="flex items-center justify-between"
                   key={invitation.id}
                 >
-                  <div className="text-gray-600 dark:text-gray-400">
+                  <div className="text-muted-foreground">
                     {invitation.email}
                   </div>
 
@@ -336,13 +336,13 @@ export default function TeamMemberManager({
                     {userPermissions.canAddTeamMembers &&
                     availableRoles.length ? (
                       <button
-                        className="ml-2 text-sm text-gray-400 underline"
+                        className="ml-2 text-sm text-muted-foreground underline"
                         onClick={() => manageRole(user)}
                       >
                         {displayableRole(user.membership.role)}
                       </button>
                     ) : availableRoles.length ? (
-                      <div className="ml-2 text-sm text-gray-400">
+                      <div className="ml-2 text-sm text-muted-foreground">
                         {displayableRole(user.membership.role)}
                       </div>
                     ) : null}
@@ -382,14 +382,14 @@ export default function TeamMemberManager({
         <DialogModal.Content title={'Manage Role'}></DialogModal.Content>
         {managingRoleFor ? (
           <div>
-            <div className="relative z-0 mt-1 border border-gray-200 dark:border-gray-700 rounded-lg cursor-pointer">
+            <div className="relative z-0 mt-1 border border-border rounded-lg cursor-pointer">
               {availableRoles.map((role, i) => (
                 <button
                   type="button"
                   className={classNames(
                     'relative px-4 py-3 inline-flex w-full rounded-lg focus:z-10 focus:outline-hidden focus:border-indigo-500 dark:focus:border-indigo-600 focus:ring-2 focus:ring-indigo-500 dark:focus:ring-indigo-600',
                     {
-                      'border-t border-gray-200 dark:border-gray-700 focus:border-none rounded-t-none':
+                      'border-t border-border focus:border-none rounded-t-none':
                         i > 0,
                       'rounded-b-none':
                         i !== Object.keys(availableRoles).length - 1,
@@ -408,13 +408,10 @@ export default function TeamMemberManager({
                     {/* <!-- Role Name --> */}
                     <div className="flex items-center">
                       <div
-                        className={classNames(
-                          'text-sm text-gray-600 dark:text-gray-400',
-                          {
-                            'font-semibold':
-                              updateRoleForm.data.role === role.key,
-                          },
-                        )}
+                        className={classNames('text-sm text-muted-foreground', {
+                          'font-semibold':
+                            updateRoleForm.data.role === role.key,
+                        })}
                       >
                         {role.name}
                       </div>
@@ -434,7 +431,7 @@ export default function TeamMemberManager({
                     </div>
 
                     {/* <!-- Role Description --> */}
-                    <div className="mt-2 text-xs text-gray-600 dark:text-gray-400">
+                    <div className="mt-2 text-xs text-muted-foreground">
                       {role.description}
                     </div>
                   </div>

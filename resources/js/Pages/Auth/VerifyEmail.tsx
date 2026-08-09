@@ -23,7 +23,7 @@ export default function VerifyEmail({ status }: Props) {
     <AuthenticationCard>
       <Head title="Email Verification" />
 
-      <div className="mb-4 text-sm text-gray-600 dark:text-gray-400">
+      <div className="mb-4 text-sm text-muted-foreground">
         Before continuing, could you verify your email address by clicking on
         the link we just emailed to you? If you didn't receive the email, we
         will gladly send you another.
@@ -48,7 +48,7 @@ export default function VerifyEmail({ status }: Props) {
           <div>
             <Link
               href={route('profile.show')}
-              className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+              className="underline text-sm text-muted-foreground hover:text-foreground rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-background"
             >
               Edit Profile
             </Link>
@@ -58,7 +58,7 @@ export default function VerifyEmail({ status }: Props) {
             href={route('logout')}
             method="post"
             as="button"
-            className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800 ml-2"
+            className="underline text-sm text-muted-foreground hover:text-foreground rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-background ml-2"
           >
             Log Out
           </Link>

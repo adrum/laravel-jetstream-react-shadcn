@@ -57,10 +57,10 @@ export default function CreateTeamForm() {
           {/* @end-chisel-profile-photos */}
 
           <div className="ml-4 leading-tight">
-            <div className="text-gray-900 dark:text-white">
+            <div className="text-foreground dark:text-white">
               {page.props.auth.user?.name}
             </div>
-            <div className="text-gray-700 dark:text-gray-300 text-sm">
+            <div className="text-foreground text-sm">
               {page.props.auth.user?.email}
             </div>
           </div>

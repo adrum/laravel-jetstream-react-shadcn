@@ -100,32 +100,32 @@ export default function ManagePasskeysForm({ passkeys }: Props) {
     >
       {isSupported ? (
         <>
-          <div className="max-w-xl text-sm text-gray-600 dark:text-gray-400">
+          <div className="max-w-xl text-sm text-muted-foreground">
             Passkeys are stored on your device and cannot be guessed, leaked, or
             reused on another site.
           </div>
 
           {passkeys.length > 0 ? (
-            <div className="mt-5 divide-y divide-gray-200 dark:divide-gray-700 border-t border-b border-gray-200 dark:border-gray-700">
+            <div className="mt-5 divide-y divide-border border-t border-b border-border">
               {passkeys.map(passkey => (
                 <div
                   className="flex items-center justify-between py-4"
                   key={passkey.id}
                 >
                   <div>
-                    <div className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                      <span className="font-medium text-gray-900 dark:text-gray-100">
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <span className="font-medium text-foreground">
                         {passkey.name}
                       </span>
 
                       {passkey.authenticator ? (
-                        <span className="ml-2 inline-flex items-center rounded-md bg-gray-100 dark:bg-gray-900 px-2 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-400">
+                        <span className="ml-2 inline-flex items-center rounded-md bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
                           {passkey.authenticator}
                         </span>
                       ) : null}
                     </div>
 
-                    <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                    <div className="mt-1 text-xs text-muted-foreground">
                       Added {passkey.created_at_diff}
                       {passkey.last_used_at_diff
                         ? ` / Last used ${passkey.last_used_at_diff}`
@@ -152,7 +152,7 @@ export default function ManagePasskeysForm({ passkeys }: Props) {
               ))}
             </div>
           ) : (
-            <div className="mt-5 rounded-lg border border-dashed border-gray-300 dark:border-gray-700 px-4 py-6 text-center text-sm text-gray-500 dark:text-gray-400">
+            <div className="mt-5 rounded-lg border border-dashed border-border px-4 py-6 text-center text-sm text-muted-foreground">
               You have not added any passkeys yet.
             </div>
           )}
@@ -171,7 +171,7 @@ export default function ManagePasskeysForm({ passkeys }: Props) {
                 autoFocus
               />
 
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+              <div className="mt-1 text-xs text-muted-foreground">
                 A name helps you recognize this passkey later.
               </div>
 
@@ -209,7 +209,7 @@ export default function ManagePasskeysForm({ passkeys }: Props) {
           )}
         </>
       ) : (
-        <div className="max-w-xl text-sm text-gray-600 dark:text-gray-400">
+        <div className="max-w-xl text-sm text-muted-foreground">
           This browser does not support passkeys.
         </div>
       )}

@@ -18,7 +18,7 @@ export default function ApiTokenIndex({
     <AppLayout
       title={'API Tokens'}
       renderHeader={() => (
-        <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+        <h2 className="font-semibold text-xl text-foreground leading-tight">
           API Tokens
         </h2>
       )}

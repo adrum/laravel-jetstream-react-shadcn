@@ -84,7 +84,7 @@ export default function Login({ canResetPassword, status }: Props) {
                 form.setData('remember', checked ? 'on' : '')
               }
             />
-            <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
+            <span className="ml-2 text-sm text-muted-foreground">
               Remember me
             </span>
           </label>
@@ -95,7 +95,7 @@ export default function Login({ canResetPassword, status }: Props) {
             <div>
               <Link
                 href={route('password.request')}
-                className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+                className="underline text-sm text-muted-foreground hover:text-foreground rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-background"
               >
                 Forgot your password?
               </Link>
@@ -106,7 +106,7 @@ export default function Login({ canResetPassword, status }: Props) {
             {/* @chisel-registration */}
             <Link
               href={route('register')}
-              className="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
+              className="underline text-sm text-muted-foreground hover:text-foreground rounded-md focus:outline-hidden focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 focus:ring-offset-background"
             >
               Need an account?
             </Link>

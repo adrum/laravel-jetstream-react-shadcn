@@ -174,7 +174,7 @@ export default function APITokenManager({
                         }
                       }}
                     />
-                    <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
+                    <span className="ml-2 text-sm text-muted-foreground">
                       {permission}
                     </span>
                   </label>
@@ -210,14 +210,14 @@ export default function APITokenManager({
 
                     <div className="flex items-center">
                       {token.last_used_ago && (
-                        <div className="text-sm text-gray-400">
+                        <div className="text-sm text-muted-foreground">
                           Last used {token.last_used_ago}
                         </div>
                       )}
 
                       {availablePermissions.length > 0 ? (
                         <PrimaryButton
-                          className="cursor-pointer ml-6 text-sm text-gray-400 underline"
+                          className="cursor-pointer ml-6 text-sm text-muted-foreground underline"
                           onClick={() => manageApiTokenPermissions(token)}
                         >
                           Permissions
@@ -250,7 +250,7 @@ export default function APITokenManager({
             again.
           </div>
 
-          <div className="mt-4 bg-gray-100 dark:bg-gray-900 px-4 py-2 rounded-sm font-mono text-sm text-gray-500">
+          <div className="mt-4 bg-muted px-4 py-2 rounded-sm font-mono text-sm text-muted-foreground">
             {page.props?.jetstream?.flash?.token}
           </div>
         </DialogModal.Content>
@@ -294,7 +294,7 @@ export default function APITokenManager({
                       }
                     }}
                   />
-                  <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">
+                  <span className="ml-2 text-sm text-muted-foreground">
                     {permission}
                   </span>
                 </label>

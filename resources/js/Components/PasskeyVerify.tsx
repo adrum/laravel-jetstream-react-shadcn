@@ -60,11 +60,11 @@ export default function PasskeyVerify({
 
       <div className="relative mt-6">
         <div className="absolute inset-0 flex items-center">
-          <div className="w-full border-t border-gray-200 dark:border-gray-700" />
+          <div className="w-full border-t border-border" />
         </div>
 
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-white dark:bg-gray-800 px-2 text-gray-500 dark:text-gray-400">
+          <span className="bg-card px-2 text-muted-foreground">
             {separator}
           </span>
         </div>
