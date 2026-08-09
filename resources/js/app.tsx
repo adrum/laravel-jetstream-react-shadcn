@@ -5,6 +5,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
 import { RouteContext } from '@/Hooks/useRoute';
+import { initializeTheme } from '@/Hooks/useAppearance';
 import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
 
 const appName =
@@ -29,3 +30,8 @@ createInertiaApp({
     );
   },
 });
+
+// Applies the persisted light/dark preference, falling back to the operating
+// system setting. shadcn's tokens are gated on a `dark` class, so without this
+// the dark palette never activates.
+initializeTheme();
